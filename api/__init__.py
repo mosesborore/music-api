@@ -7,5 +7,5 @@ app = Flask(__name__)
 app.config.from_object(Config)
 
 db_name = Config.MONGODB_SETTINGS['db']
-connect("gpt_songs")
+connect(db_name)
 from api import routes  
